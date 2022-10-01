@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 15px;
+}
+
+div div {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+}
+
+ul {
+  width: 200px;
+  height: auto;
+  list-style: none;
+  padding: 15px 20px;
+  text-align: left;
+}
+
+li:first-child {
+  margin-top: 5px;
+}
+
+div div:nth-child(1):hover {
+  background-color: green;
+  border: 1px solid green;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+div > div:nth-child(1):hover ~ div {
+  border-color: green;
+  color: green;
+}
+
+div:last-of-type div:nth-child(2):hover + div {
+  background-color: red;
+  border: 1px solid red;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+div:nth-of-type(2) div:nth-child(2):hover + div {
+  background-color: orange;
+  border: 1px solid orange;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+div:first-of-type div:nth-child(2):hover + div {
+  background-color: green;
+  border: 1px solid green;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}

@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid rgb(0, 175, 0);
+  color: rgb(0, 175, 0);
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(0, 175, 0);
+  color: white;
+  transition: 0.2s ease-in;
+}
+
+.button:nth-child(odd):hover ~ .button:nth-child(odd) {
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+}
+
+.button:nth-child(odd):hover ~ .button:nth-child(even) {
+  background-color: red;
+  border: 1px solid red;
+  color: white;
+}
+
+.button:nth-child(odd):hover + .button:nth-child(even) {
+  border: 1px solid rgb(0, 175, 0);
+  color: rgb(0, 175, 0);
+  background-color: white;
+}
+
+.button:nth-child(even):hover ~ .button:nth-child(odd) {
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+}
